@@ -11,6 +11,8 @@ require_once 'core/library/dataBase.php';
 require_once 'core/library/Validator.php';
 
 
+define('ROOT',__DIR__);
+
 
 
 

@@ -36,13 +36,13 @@
 
 <form action="" method = "POST" enctype="multipart/form-data">
     Username:<input type="text" name = "user_name" required value = "<?= (isset($_POST['user_name']))
-        ? $_POST['user_name'] : '' ?>"
+        ? htmlspecialchars($_POST['user_name'] ): '' ?>"
                     class = "<?= (isset($formErrors['user_name'])) ? 'active' : ''?>"
     ><br><br>
     Email:<input type="email" name = "email" required value="<?= (isset($_POST['email'])) ? $_POST['email'] : '' ?>"
     class = "<?= isset($formErrors['email']) ? 'active' : '' ?>"
     ><br><br>
-    Title: <input type="text" name = "title" value = "<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
+    Title: <input type="text" name = "title" value = "<?= isset($_POST['title']) ? htmlspecialchars($_POST['title']) : '' ?>">
     <div id = "file">
         Upload photo:<input type="file" name = "photo">
         Upload file:<input type="file" name = "file">
